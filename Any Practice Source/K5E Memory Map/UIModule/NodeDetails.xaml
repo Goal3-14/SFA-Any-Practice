@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="K5E_Memory_Map.UIModule.NodeDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:K5E_Memory_Map.UIModule"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="556">
+
+
+    <Grid Background="LightCyan">
+        <TextBlock Text="Current Node " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,0,0,0" FontSize="12" Visibility="Collapsed"/>
+        <TextBlock Text="{Binding Hash, StringFormat = 'Hash: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,60,0,0" FontSize="15"/>
+        <TextBlock Text="{Binding NodeTag, StringFormat = 'Tag: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="03,40,0,0" FontSize="15"/>
+        <TextBlock Text="{Binding Stated, StringFormat = 'State: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="385,5,0,0" FontSize="12" Visibility="Collapsed"/>
+        <TextBlock Text="{Binding NodeText, StringFormat = 'Details: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,0,0,0" FontSize="15"/>
+        <TextBox Name ="TextInput" Height="17" Width="420" HorizontalAlignment="Left" Margin="2,62,0,1" Visibility="Collapsed"/>
+        <Button Height="17" Width="40" HorizontalAlignment="Left" Margin="422,62,0,1" Content="Save" FontSize="11" Click="SaveText" Visibility="Collapsed"/>
+        <Button Height="18" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,4,0,0" Content="Save State" FontSize="11" Click="Save_State" Visibility="Collapsed"/>
+        <Button Height="16" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,24,0,0" Content="Add Under" FontSize="11" Click="AddUnder" Visibility="Collapsed"/>
+        <Button Height="18" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,42,0,0" Content="Load Last" FontSize="11" Click="LoadLast" Visibility="Collapsed"/>
+        <Button Height="16" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,62,0,0" Content="Wait Result" FontSize="11" Click="WaitResult" Visibility="Collapsed"/>
+
+
+
+    </Grid>
+
+
+</UserControl>

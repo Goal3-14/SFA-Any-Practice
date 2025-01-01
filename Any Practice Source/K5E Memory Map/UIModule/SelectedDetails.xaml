@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="K5E_Memory_Map.UIModule.SelectedDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:K5E_Memory_Map.UIModule"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="150">
+
+
+    <Grid Background="LightCyan">
+        <TextBlock Text="Selected Node " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,0,0,0" FontSize="12" Visibility="Collapsed"/>
+        <TextBlock Text="{Binding Hash, StringFormat = 'Hash: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,15,0,0" FontSize="12" Visibility="Collapsed"/>
+        <TextBlock Text="{Binding NodeTag, StringFormat = 'Tag: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="00,30,0,0" FontSize="12" Visibility="Collapsed"/>
+        <TextBlock Text="{Binding Stated, StringFormat = 'State: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="385,5,0,0" FontSize="12" Visibility="Collapsed"/>
+        <TextBlock Text="{Binding NodeText, StringFormat = 'Details: {0}'}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,45,0,0" FontSize="12" Visibility="Collapsed"/>
+        <TextBox Name ="TextInput" Height="17" Width="421" HorizontalAlignment="Left" Margin="2,62,0,1" Visibility="Collapsed"/>
+        <Button Height="17" Width="40" HorizontalAlignment="Left" Margin="423,62,0,1" Content="Save" FontSize="11" Click="SaveText" Visibility="Collapsed"/>
+        <Button Height="18" Width="70" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="21,0,0,0" Content="Load State" FontSize="11" Click="LoadState" Visibility="Collapsed"/>
+        <Button Height="16" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,24,0,0" Content="Add Under" FontSize="11" Click="AddUnder" Visibility="Collapsed"/>
+        <Button Height="18" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,42,0,0" Content="Delete Below" FontSize="11" Click="DelBelow" Visibility="Collapsed"/>
+        <Button Height="16" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,62,0,0" Content="Delete" FontSize="11" Click="DelNode" Visibility="Collapsed"/>
+
+        <Button Name ="EdgeButton" Height="16" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="393,24,0,0" Content="Del Edge" FontSize="11" Click="DelEdge" Visibility="Collapsed"/>
+
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name ="IMB" Content="IM" Width="50" Click="IM"/>
+                <Button Name ="K5EB" Content="K5E" Width="50" Click="K5E" Background="DarkGray"/>
+                <Button Name ="WCB" Content="WC" Width="50" Click="WC"/>
+            </StackPanel>
+
+            <StackPanel Name="O2States">
+                <Button Content="Start" Click="LoadState" Tag="21" Height="30"/>
+                <Button Content="Bike" Click="LoadState" Tag="22" Height="30"/>
+                <Button Content="Cell" Click="LoadState" Tag="23" Height="30"/>
+                <Button Content="Camera Stabalised(First Fall)" Click="LoadState" Tag="24" Height="30"/>
+                <Button Content="Drop 2" Click="LoadState" Tag="25" Height="30"/>
+                <Button Content="Swim 1" Click="LoadState" Tag="26" Height="30"/>
+                <Button Content="Swim 2" Click="LoadState" Tag="27" Height="30"/>
+                <Button Content="Enter K5" Click="LoadState" Tag="28" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="29" Height="30"/>
+            </StackPanel>
+
+            <StackPanel Name="O1States" Margin="0,0,0,0" Visibility="Collapsed">
+                <Button Content="Start" Click="LoadState" Tag="11" Height="30"/>
+                <Button Content="Gate" Click="LoadState" Tag="12" Height="30"/>
+                <Button Content="Seam Drop" Click="LoadState" Tag="13" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="14" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="15" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="16" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="17" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="18" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="19" Height="30"/>
+            </StackPanel>
+
+            <StackPanel Name="O3States" Margin="0,0,0,0" Visibility="Collapsed">
+                <Button Content="Start" Click="LoadState" Tag="31" Height="30"/>
+                <Button Content="Height 1" Click="LoadState" Tag="32" Height="30"/>
+                <Button Content="Height 2" Click="LoadState" Tag="33" Height="30"/>
+                <Button Content="Approach" Click="LoadState" Tag="34" Height="30"/>
+                <Button Content="Lined Up" Click="LoadState" Tag="35" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="36" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="37" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="38" Height="30"/>
+                <Button Content="---" Click="LoadState" Tag="39" Height="30"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

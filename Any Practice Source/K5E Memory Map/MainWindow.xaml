@@ -1,0 +1,102 @@
+﻿<Window x:Class="K5E_Memory_Map.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:K5E_Memory_Map" xmlns:userControls="clr-namespace:K5E_Memory_Map.UIModule"
+        mc:Ignorable="d"
+        Title="Any% Practice" Height="440" Width="468"
+        WindowState="Normal"
+        SizeToContent="Manual"
+        Name="MMainWindow">
+    <Grid>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150" Name="DisplayCol"/>
+            <ColumnDefinition Width="1*" Name="GraphCol"/>
+        </Grid.ColumnDefinitions>
+        
+
+        <!-- Bottom Right  -->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="290"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            
+            <Border Grid.Column ="1" BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            <userControls:TagButtons x:Name ="TTagButtons" Visibility="Collapsed"/>
+
+
+            <Grid Grid.Column="1">
+                <userControls:SelectedDetails x:Name ="SSelectedDetails" Grid.Row="1"/>
+                <Border Grid.Column ="1" BorderBrush ="Black" BorderThickness="0.1" Padding="0"/>
+                <Border Grid.Row ="1" BorderBrush ="Black" BorderThickness="1" Padding="0"/>
+            </Grid>
+            <userControls:SaveMenu x:Name="SSaveMenu" Visibility="Visible" Grid.Row="1"/>
+            <CheckBox Name="GraphCheck" Content="Graph" IsChecked="False" FontSize="15" Checked="GraphChecked" Unchecked="GraphUn" Panel.ZIndex="1" Grid.Row="1" Margin="0,80,0,0"/>
+        </Grid>
+
+        <!-- Top Left  -->
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <userControls:MainMenu x:Name="MMainMenu" Grid.Row="1"/>
+            <userControls:DisplayMenu x:Name ="DDisplayMenu" Grid.Column="1" Visibility="Visible"/>
+            <Border BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            <Border Grid.Column ="2" BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            
+        </Grid>
+
+        <!-- Top Right  -->
+        <Grid Grid.Row="0" Grid.Column="3">
+            <Border BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            <userControls:SmallGraph x:Name ="SSmallGraph" Visibility="Hidden" />
+            <userControls:FullGraph x:Name ="FFullGraph" Visibility="Hidden"/>
+            
+            <userControls:Analysis x:Name="AAnalysis" Visibility="Hidden"/>
+            <userControls:Practice x:Name="PPractice" Visibility="Hidden"/>
+            <userControls:Merge x:Name="MMerge" Visibility="Hidden"/>
+            
+        </Grid>
+
+        <!-- Bottom Left  -->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="152"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <userControls:NodeDetails x:Name="NNodeDetails" Grid.Row="1"/>
+            <userControls:ProcessingState x:Name="ProcessingState" Grid.Row="0" />
+            <userControls:MemDisplay x:Name="MMemDisplay" Grid.Row="2"/>
+            <Border BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            <Border Grid.Row ="1" BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            <TextBlock Name ="TB_Hash" Grid.Row="1" Text="{Binding Hash, StringFormat = 'Heap: {0}'}" Padding="3,72,0,0" Visibility="Collapsed"/>
+            <TextBlock Name ="TB_Frame" Grid.Row="1" Text="{Binding Frame, StringFormat = 'Frame: {0}'}" Padding="3,99,0,0" Visibility="Collapsed"/>
+            <Border Grid.Row ="2" BorderBrush ="Black" BorderThickness="0.5" Padding="0"/>
+            
+            <Button Visibility ="Collapsed" Name ="PauseButton" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width ="40" Margin="0,0,0,0" Grid.Row="2" Panel.ZIndex="1" Click="PauseToggle" >
+                <Grid>
+                    <Rectangle HorizontalAlignment="Right" Width ="8" Height="20" Margin="-13,0,0,0" Grid.Row="2" Panel.ZIndex="2" Fill="DarkGray"/>
+                    <Rectangle HorizontalAlignment="Right" Width ="8" Height="20" Margin="0,0,13,0" Grid.Row="2" Panel.ZIndex="2" Fill="DarkGray"/>
+                </Grid>
+            </Button>
+
+            <Button Visibility="Collapsed" Name ="PlayButton" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width ="40" Margin="0,0,0,0" Grid.Row="2" Panel.ZIndex="1" Click="PauseToggle">
+                <Grid>
+                    <!-- Play symbol as a triangle -->
+                    <Path Data="M12,10 L28,20 L12,30 Z" Fill="Black" Margin ="-8,-8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            
+        </Grid>
+
+    </Grid>
+</Window>

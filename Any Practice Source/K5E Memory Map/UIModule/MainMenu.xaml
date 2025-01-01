@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="K5E_Memory_Map.UIModule.MainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:K5E_Memory_Map.UIModule"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="150">
+    <Grid Background="LightGray">
+
+        <Button Name ="FFull" Width="150" Height ="30" Content="Full Graph" FontSize="16" VerticalAlignment="Top" Margin="0,1,0,0" Click="MenuButton" Tag ="1"/>
+        <Button Name ="PPractice" Width="150" Height ="30" Content="Practice" FontSize="16" VerticalAlignment="Top" Margin="0,31,0,0" Click="MenuButton" Tag ="4"/>
+
+        <Button Name ="MMain" Width="150" Height ="30" Content="Main" FontSize="16" VerticalAlignment="Top" Margin="0,30,0,0" Click="MenuButton" Tag ="0" Visibility="Collapsed"/>
+        <Button Name ="SSave" Width="150" Height ="30" Content="Save/Load" FontSize="16" VerticalAlignment="Top" Margin="0,0,0,0" Click="MenuButton" Tag ="2" Background="DarkGray" Visibility="Collapsed"/>
+        <Button Name ="AAnalysis" Width="150" Height ="30" Content="Analysis" FontSize="16" VerticalAlignment="Top" Margin="0,150,0,0" Click="MenuButton" Tag ="3" Visibility="Collapsed"/>
+        <Button Name ="MMerge" Width="150" Height ="40" Content="Merge" FontSize="16" VerticalAlignment="Top" Margin="0,230,0,0" Click="MenuButton" Tag ="5" Visibility="Collapsed"/>
+    </Grid>
+</UserControl>

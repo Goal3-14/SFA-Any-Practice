@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "K1Rfti4TTGg=",
+  "success": true,
+  "projectFilePath": "E:\\B - SFA\\K5 Memory Maps\\Prac\\Prac v1.4\\Memory Map Source\\K5E Memory Map\\K5E Memory Map.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jack\\.nuget\\packages\\microsoft.msagl\\1.1.6\\microsoft.msagl.1.1.6.nupkg.sha512",
+    "C:\\Users\\Jack\\.nuget\\packages\\microsoft.msagl.drawing\\1.1.6\\microsoft.msagl.drawing.1.1.6.nupkg.sha512",
+    "C:\\Users\\Jack\\.nuget\\packages\\microsoft.msagl.graphviewergdi\\1.1.7\\microsoft.msagl.graphviewergdi.1.1.7.nupkg.sha512"
+  ],
+  "logs": []
+}
