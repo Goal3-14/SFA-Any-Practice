@@ -8,7 +8,7 @@ Savestates can be large and this uses 750MB of savestates. You can download a ve
 Click Load and Select the "K5E" file.
 
 While running
-- Green means you a correct memory value
+- Green means you have a correct memory value
 - Red means you have a wrong memory value
 - Blue means neutral, they are in the list of memory addresses but arent marked as good or bad
 - Orange means you have a memory value not in the list. Before camera stabalisation and first drop, orange will mean Red. After camera stabalisation and drop you can ignore the orange, as the exact memory values don't matter as much and can vary wildly past that point.
